@@ -34,7 +34,7 @@ function App() {
 
       <section className={styles.section3}>
         <img className={styles.kavoslogo} onClick={() => setShow(true)} src={kavoslogo}></img>
-        {show && <h2>sometimes bry... i don't think </h2>}
+        {show && <h2>sometimes, brian, I don't think... I.. Know you... </h2>}
       </section >
 
       <section className={styles.section3}>

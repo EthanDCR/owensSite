@@ -6,8 +6,7 @@ import vx1000 from "../src/assets/video/VX1000WHITE.mp4"
 import kavoslogo from "../src/assets/KAVOSSIGNAGEIPHONE.png"
 import rustyRida from "../src/assets/video/RUSTYRIDER_TEST.mp4"
 import twinHead from "../src/assets/TwinHeadMockup.png"
-import { useState } from "react";
-
+import HTMLFlipBook from 'react-pageflip';
 
 function App() {
 
@@ -50,6 +49,14 @@ function App() {
         <img className={styles.twinhead} src={twinHead} />
       </section>
 
+      <section className={styles.section5}>
+        <HTMLFlipBook width={300} height={500}>
+          <div className="demoPage"><img width={300} height={500} src={kavoslogo} /></div>
+          <div className="demoPage">Page 2</div>
+          <div className="demoPage">Page 3</div>
+          <div className="demoPage">Page 4</div>
+        </HTMLFlipBook>
+      </section>
 
 
     </div >

@@ -7,6 +7,8 @@ import kavoslogo from "../src/assets/KAVOSSIGNAGEIPHONE.png";
 import rustyRida from "../src/assets/video/RUSTYRIDER_TEST.mp4";
 import twinHead from "../src/assets/TwinHeadMockup.png";
 import HTMLFlipBook from 'react-pageflip';
+import peter from "../src/assets/petaaa.png"
+
 
 function App() {
   return (
@@ -79,8 +81,8 @@ function App() {
           {/* Page 3 (Left side) */}
           <div className={styles.demoPage}>
             <div className={styles.pageContent}>
-              <h2>Process</h2>
-              <p>Exploring lo-fi aesthetics.</p>
+              <h2>P-Grif</h2>
+              <img src={peter} alt="Content 1" className={styles.bookImg} />
             </div>
           </div>
 

@@ -49,39 +49,44 @@ function App() {
 
       <section className={styles.section5}>
         <HTMLFlipBook
-          width={300}
-          height={500}
+          width={400}
+          height={550}
           size="stretch"
           minWidth={150}
-          maxWidth={400}
+          maxWidth={1000}
           minHeight={250}
-          maxHeight={600}
-          showCover={true}
-          mobileScrollSupport={true}
+          maxHeight={1533}
+          showCover={false}
+          usePortrait={false} // FORCES two pages even on small screens
+          startPage={0}
+          autoSize={true}
+          showOnlyTablet={false}
+          className={styles.flipBook}
         >
-          {/* Page 1 (Cover) */}
+          {/* Page 1 (Left side) */}
           <div className={styles.demoPage}>
-            <img width="100%" height="100%" src={kavoslogo} alt="Cover" style={{ objectFit: 'cover' }} />
+            <img src={kavoslogo} alt="Content 1" className={styles.bookImg} />
           </div>
-          {/* Page 2 */}
+
+          {/* Page 2 (Right side) */}
           <div className={styles.demoPage}>
-            <div style={{ padding: '20px' }}>
-              <h2>Page 2</h2>
-              <img width="100%" height="100%" src={twinHead} alt="Cover" style={{ objectFit: 'cover' }} />
+            <div className={styles.pageContent}>
+              <h2>Project Alpha</h2>
+              <p>Visual identity and digital direction.</p>
             </div>
           </div>
-          {/* Page 3 */}
+
+          {/* Page 3 (Left side) */}
           <div className={styles.demoPage}>
-            <div style={{ padding: '20px' }}>
-              <h2>Page 3</h2>
-              <p>More content.</p>
+            <div className={styles.pageContent}>
+              <h2>Process</h2>
+              <p>Exploring lo-fi aesthetics.</p>
             </div>
           </div>
-          {/* Page 4 (Back Cover) */}
+
+          {/* Page 4 (Right side) */}
           <div className={styles.demoPage}>
-            <div style={{ padding: '20px' }}>
-              <h2>The End</h2>
-            </div>
+            <img src={twinHead} alt="Content 2" className={styles.bookImg} />
           </div>
         </HTMLFlipBook>
       </section>

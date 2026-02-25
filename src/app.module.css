@@ -1,16 +1,18 @@
-
-/* --- MOBILE STYLES --- */
+/* --- GLOBAL / MOBILE FIRST STYLES --- */
 .page {
   padding: 0;
   display: flex;
   flex-direction: column;
   align-items: center;
   text-align: center;
+  width: 100%;
+  overflow-x: hidden; /* Prevents book overflow on small screens */
 }
 
 .owenAllen {
   width: 150px; 
   height: auto;
+  margin: 20px 0;
 }
 
 h1 {
@@ -21,38 +23,79 @@ h1 {
 p {
   font-size: 1rem;
   line-height: 1.4;
-  max-width: 100%; 
+  max-width: 90%; 
+  margin: 10px auto;
 }
 
 .page section {
   width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 30px;
 }
 
 .section1 {
   background-color: pink;
 }
 
-.section2 {
-}
-.section2 video {
+/* Videos and Images scale to 100% on Mobile */
+.section2 video, 
+.section3 video, 
+.kavoslogo {
   width: 100%;
-}
-
-.section3 video {
-  width: 100%;
+  max-width: 100%;
+  height: auto;
 }
 
 .rusty {
-height: 250px;
-}
-
-.kavoslogo{
-width: 100%;
+  height: 250px; /* Keep your specific height */
+  object-fit: cover;
 }
 
 .twinhead {
-  width: 400px;
+  width: 100%;
+  max-width: 400px;
 }
 
+/* --- THE BOOK SECTION --- */
+.section5 {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px 0;
+}
 
+/* Custom Page Styles for the Book */
+.demoPage {
+  background-color: white;
+  border: 1px solid #ddd;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: inset 0 0 5px rgba(0,0,0,0.1);
+}
 
+/* --- DESKTOP REFINEMENTS (Screens wider than 768px) --- */
+@media (min-width: 768px) {
+  .page {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+
+  /* Shrink the massive videos on desktop so they don't eat the whole screen */
+  .section2 video {
+    width: 60%;
+    border-radius: 20px;
+  }
+
+  .kavoslogo {
+    width: 50%;
+  }
+
+  h1 {
+    font-size: 2.5rem;
+  }
+}

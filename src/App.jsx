@@ -11,7 +11,6 @@ import { useState } from "react";
 
 function App() {
 
-  const [show, setShow] = useState(false)
 
 
   return (
@@ -33,8 +32,7 @@ function App() {
       </section>
 
       <section className={styles.section3}>
-        <img className={styles.kavoslogo} onClick={() => setShow(true)} src={kavoslogo}></img>
-        {show && <h2>sometimes, brian, I don't think... I.. Know you... </h2>}
+        <img className={styles.kavoslogo} src={kavoslogo}></img>
       </section >
 
       <section className={styles.section3}>

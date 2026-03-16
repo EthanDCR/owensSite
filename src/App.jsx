@@ -8,7 +8,7 @@ import twinHead from "../src/assets/TwinHeadMockup.png";
 import HTMLFlipBook from 'react-pageflip';
 //import peter from "../src/assets/petaaa.png";
 import amp from "../src/assets/video/amp.mp4";
-import KonaLottie from "./components/KonaEmblemLottie";
+import Kona2Lottie from "./components/Kona2Lottie";
 import VX1000Animation from "./components/VX1000Lottie";
 
 import p1 from "../src/assets/BookPages/PAGESFORSite.png";
@@ -35,8 +35,33 @@ function App() {
         </div>
       </section>
 
-      <section className={styles.konaAndVx}>
-        <KonaLottie width={600} height={600} />
+      <section className={styles.portfolioGrid}>
+
+        {/* Kona Farms */}
+        <div className={`${styles.gridCell} ${styles.konaPair}`}>
+          <Kona2Lottie />
+        </div>
+
+        {/* Kavos */}
+        <div className={styles.gridCell}>
+          <img src={kavoslogo} alt="Kavos" className={styles.gridMedia} />
+        </div>
+
+        {/* Amp video */}
+        <div className={styles.gridCell}>
+          <video src={amp} autoPlay loop muted playsInline className={styles.gridMedia} />
+        </div>
+
+        {/* Rusty Rider — wide */}
+        <div className={`${styles.gridCell} ${styles.cellWide}`}>
+          <video src={rustyRida} autoPlay loop muted playsInline className={styles.gridMedia} />
+        </div>
+
+        {/* Twin Head Mockup */}
+        <div className={styles.gridCell}>
+          <img src={twinHead} alt="Twin Head Mockup" className={styles.gridMedia} />
+        </div>
+
       </section>
 
 

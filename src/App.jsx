@@ -24,16 +24,15 @@ function App() {
 
   return (
     <div className={styles.page}>
-      <nav>
+      <header className={styles.navbar}>
         <BubbleMenu logo={owenAllen} />
-      </nav>
-
-      <section className={styles.hero}>
-        <img className={styles.owenAllenHero} src={owenAllen} alt="Owen Allen" />
-        <div className={styles.vx1000HeroWrapper}>
-          <VX1000Animation width="1200px" className={styles.VX1000Animation} />
+        <div className={styles.heroContent}>
+          <img className={styles.owenAllenHero} src={owenAllen} alt="Owen Allen" />
+          <div className={styles.vx1000HeroWrapper}>
+            <VX1000Animation width="500px" />
+          </div>
         </div>
-      </section>
+      </header>
 
       <section className={styles.portfolioGrid}>
 

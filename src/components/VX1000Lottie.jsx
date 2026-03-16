@@ -3,7 +3,7 @@ import { DotLottieReact } from '@lottiefiles/dotlottie-react';
 // Rename the import to 'animationData' to avoid a name collision with the component
 import animationData from "../assets/lotties/VX1000.json";
 
-const VX1000Animation = ({ width = '300px', loop = true }) => {
+const VX1000Animation = ({ width = '300px', loop = false }) => {
   return (
     <div style={{ width, margin: '0 auto' }}>
       <DotLottieReact

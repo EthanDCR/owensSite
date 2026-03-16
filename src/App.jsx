@@ -10,6 +10,9 @@ import HTMLFlipBook from 'react-pageflip';
 import amp from "../src/assets/video/amp.mp4";
 import Kona2Lottie from "./components/Kona2Lottie";
 import VX1000Animation from "./components/VX1000Lottie";
+import ProductDemo from "../src/assets/video/productDemo.mp4"
+
+
 
 import p1 from "../src/assets/BookPages/PAGESFORSite.png";
 import p2 from "../src/assets/BookPages/PAGESFORSite2.png";
@@ -29,7 +32,7 @@ function App() {
         <div className={styles.heroContent}>
           <img className={styles.owenAllenHero} src={owenAllen} alt="Owen Allen" />
           <div className={styles.vx1000HeroWrapper}>
-            <VX1000Animation width="500px" />
+            <VX1000Animation width="900px" />
           </div>
         </div>
       </header>
@@ -58,9 +61,8 @@ function App() {
 
         {/* Twin Head Mockup */}
         <div className={styles.gridCell}>
-          <img src={twinHead} alt="Twin Head Mockup" className={styles.gridMedia} />
+          <video src={ProductDemo} autoPlay loop muted playsInline alt="Twin Head Mockup" className={styles.gridMedia} />
         </div>
-
       </section>
 
 

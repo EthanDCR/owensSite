@@ -83,6 +83,55 @@
 }
 
 
+.page .hero {
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  padding: 60px 0;
+  overflow: visible;
+  position: relative;
+}
+
+.owenAllenHero {
+  width: 280px;
+  height: auto;
+  position: relative;
+  z-index: 1;
+  flex-shrink: 0;
+}
+
+.vx1000HeroWrapper {
+  margin-left: -400px;
+  margin-top: 20px;
+  position: relative;
+  z-index: 2;
+  flex-shrink: 0;
+}
+
+.VX1000Animation {
+}
+
+
+.page .konaAndVx {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  padding: 80px 0;
+  width: 100%;
+  background: #0a0a0a;
+  overflow: visible;
+}
+
+/* VX1000 overlaps Kona by ~50% of its width (500px wide → pull left 250px) */
+.konaAndVx > div:nth-child(2) {
+  margin-left: -250px;
+  position: relative;
+  z-index: 1;
+}
+
+
+
 /* --- DESKTOP --- */
 @media (min-width: 768px) {
   .page {

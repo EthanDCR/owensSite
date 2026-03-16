@@ -2,76 +2,43 @@ import Lottie from "lottie-react";
 import styles from "../src/app.module.css";
 import owenAllen from "../src/assets/OWENALLEN.svg";
 import BubbleMenu from "./components/BubbleMenu";
-import vx1000 from "../src/assets/video/VX1000WHITE.mp4";
 import kavoslogo from "../src/assets/KAVOSSIGNAGEIPHONE.png";
 import rustyRida from "../src/assets/video/RUSTYRIDER_TEST.mp4";
 import twinHead from "../src/assets/TwinHeadMockup.png";
 import HTMLFlipBook from 'react-pageflip';
-import peter from "../src/assets/petaaa.png"
-import amp from "../src/assets/video/amp.mp4"
-import page1 from "../src/assets/BookPages/PAGESFORSite.png"
-import page2 from "../src/assets/BookPages/PAGESFORSite1.png"
-import page2 from "../src/assets/BookPages/PAGESFORSite2.png"
-import page3 from "../src/assets/BookPages/PAGESFORSite3.png"
-import page4 from "../src/assets/BookPages/PAGESFORSite4.png"
-import page5 from "../src/assets/BookPages/PAGESFORSite5.png"
-import page6 from "../src/assets/BookPages/PAGESFORSite6.png"
-import page7 from "../src/assets/BookPages/PAGESFORSite7.png"
+//import peter from "../src/assets/petaaa.png";
+import amp from "../src/assets/video/amp.mp4";
+import KonaLottie from "./components/KonaEmblemLottie";
+import VX1000Animation from "./components/VX1000Lottie";
 
-
+import p1 from "../src/assets/BookPages/PAGESFORSite.png";
+import p2 from "../src/assets/BookPages/PAGESFORSite2.png";
+import p3 from "../src/assets/BookPages/PAGESFORSite3.png";
+import p4 from "../src/assets/BookPages/PAGESFORSite4.png";
+import p6 from "../src/assets/BookPages/PAGESFORSite6.png";
+import p7 from "../src/assets/BookPages/PAGESFORSite7.png";
+import p8 from "../src/assets/BookPages/PAGESFORSite8.png";
 
 function App() {
+  const bookPages = [p1, p2, p3, p4, p6, p7, p8];
+
   return (
     <div className={styles.page}>
       <nav>
         <BubbleMenu logo={owenAllen} />
-        <img className={styles.owenAllen} src={owenAllen} alt="Logo" />
       </nav>
 
-
-      <section className={styles.section1}>
-        <video className={styles.amp}
-          src={amp}
-          autoPlay
-          loop
-          muted
-          playsInline
-          style={{ pointerEvents: 'none' }}
-        />
+      <section className={styles.hero}>
+        <img className={styles.owenAllenHero} src={owenAllen} alt="Owen Allen" />
+        <div className={styles.vx1000HeroWrapper}>
+          <VX1000Animation width="1200px" className={styles.VX1000Animation} />
+        </div>
       </section>
 
-
-
-      <section className={styles.section2}>
-        <video
-          src={vx1000}
-          autoPlay
-          loop
-          muted
-          playsInline
-          style={{ pointerEvents: 'none' }}
-        />
+      <section className={styles.konaAndVx}>
+        <KonaLottie width={600} height={600} />
       </section>
 
-      <section className={styles.section3}>
-        <img className={styles.kavoslogo} src={kavoslogo} alt="Kavos Logo" />
-      </section>
-
-      <section className={styles.section3}>
-        <video
-          className={styles.rusty}
-          src={rustyRida}
-          autoPlay
-          loop
-          muted
-          playsInline
-          style={{ pointerEvents: 'none' }}
-        />
-      </section>
-
-      <section className={styles.section4}>
-        <img className={styles.twinhead} src={twinHead} alt="TwinHead Mockup" />
-      </section>
 
       <section className={styles.section5}>
         <HTMLFlipBook
@@ -83,37 +50,22 @@ function App() {
           minHeight={250}
           maxHeight={1533}
           showCover={false}
-          usePortrait={false} // FORCES two pages even on small screens
+          usePortrait={false}
           startPage={0}
           autoSize={true}
           showOnlyTablet={false}
           className={styles.flipBook}
         >
-          {/* Page 1 (Left side) */}
-          <div className={styles.demoPage}>
-            <img src={kavoslogo} alt="Content 1" className={styles.bookImg} />
-          </div>
-
-          {/* Page 2 (Right side) */}
-          <div className={styles.demoPage}>
-            <div className={styles.pageContent}>
-              <h2>Project Alpha</h2>
-              <p>Visual identity and digital direction.</p>
+          {bookPages.map((image, index) => (
+            <div key={index} className={styles.demoPage}>
+              <img
+                src={image}
+                alt={`Page ${index + 1}`}
+                className={styles.bookImg}
+                style={{ width: '100%', height: '100%', objectFit: 'cover' }}
+              />
             </div>
-          </div>
-
-          {/* Page 3 (Left side) */}
-          <div className={styles.demoPage}>
-            <div className={styles.pageContent}>
-              <h2>P-Grif</h2>
-              <img src={peter} alt="Content 1" className={styles.bookImg} />
-            </div>
-          </div>
-
-          {/* Page 4 (Right side) */}
-          <div className={styles.demoPage}>
-            <img src={twinHead} alt="Content 2" className={styles.bookImg} />
-          </div>
+          ))}
         </HTMLFlipBook>
       </section>
     </div>

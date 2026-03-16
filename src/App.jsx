@@ -8,6 +8,16 @@ import rustyRida from "../src/assets/video/RUSTYRIDER_TEST.mp4";
 import twinHead from "../src/assets/TwinHeadMockup.png";
 import HTMLFlipBook from 'react-pageflip';
 import peter from "../src/assets/petaaa.png"
+import amp from "../src/assets/video/amp.mp4"
+import page1 from "../src/assets/BookPages/PAGESFORSite.png"
+import page2 from "../src/assets/BookPages/PAGESFORSite1.png"
+import page2 from "../src/assets/BookPages/PAGESFORSite2.png"
+import page3 from "../src/assets/BookPages/PAGESFORSite3.png"
+import page4 from "../src/assets/BookPages/PAGESFORSite4.png"
+import page5 from "../src/assets/BookPages/PAGESFORSite5.png"
+import page6 from "../src/assets/BookPages/PAGESFORSite6.png"
+import page7 from "../src/assets/BookPages/PAGESFORSite7.png"
+
 
 
 function App() {
@@ -17,6 +27,20 @@ function App() {
         <BubbleMenu logo={owenAllen} />
         <img className={styles.owenAllen} src={owenAllen} alt="Logo" />
       </nav>
+
+
+      <section className={styles.section1}>
+        <video className={styles.amp}
+          src={amp}
+          autoPlay
+          loop
+          muted
+          playsInline
+          style={{ pointerEvents: 'none' }}
+        />
+      </section>
+
+
 
       <section className={styles.section2}>
         <video

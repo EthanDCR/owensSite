@@ -76,6 +76,13 @@
   object-fit: cover;
 }
 
+
+.section1{
+  width: 414;
+  height: 200;
+}
+
+
 /* --- DESKTOP --- */
 @media (min-width: 768px) {
   .page {
@@ -92,3 +99,7 @@
     font-size: 18px;
   }
 }
+
+
+
+

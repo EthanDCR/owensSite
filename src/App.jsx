@@ -69,12 +69,12 @@ function App() {
       <section className={styles.section5}>
         <HTMLFlipBook
           width={400}
-          height={550}
+          height={553}
           size="stretch"
           minWidth={150}
-          maxWidth={1000}
-          minHeight={250}
-          maxHeight={1533}
+          maxWidth={800}
+          minHeight={553}
+          maxHeight={553}
           showCover={false}
           usePortrait={false}
           startPage={0}
@@ -88,7 +88,7 @@ function App() {
                 src={image}
                 alt={`Page ${index + 1}`}
                 className={styles.bookImg}
-                style={{ width: '100%', height: '100%', objectFit: 'cover' }}
+                style={{ width: '100%', height: '100%', objectFit: 'contain' }}
               />
             </div>
           ))}

@@ -86,7 +86,7 @@
 .navbar {
   position: relative;
   width: 100%;
-  height: 470px;
+  height: 200px;
   overflow: visible;
 }
 
@@ -148,10 +148,9 @@
   padding-left: 60px;
 }
 
-/* Rusty Rider: wide + tall */
+/* Rusty Rider: wide */
 .cellWide {
   grid-column: span 2;
-  grid-row: span 2;
 }
 
 .gridMedia {

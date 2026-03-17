@@ -7,7 +7,7 @@ import rustyRida from "../src/assets/video/RUSTYRIDER_TEST.mp4";
 import twinHead from "../src/assets/TwinHeadMockup.png";
 import HTMLFlipBook from 'react-pageflip';
 //import peter from "../src/assets/petaaa.png";
-import amp from "../src/assets/video/amp.mp4";
+//import amp from "../src/assets/video/amp.mp4";
 import Kona2Lottie from "./components/Kona2Lottie";
 import VX1000Animation from "./components/VX1000Lottie";
 import ProductDemo from "../src/assets/video/productDemo.mp4"
@@ -50,11 +50,6 @@ function App() {
         {/* Kavos */}
         <div className={styles.gridCell}>
           <img src={kavoslogo} alt="Kavos" className={styles.gridMedia} />
-        </div>
-
-        {/* Amp video */}
-        <div className={styles.gridCell}>
-          <video src={amp} autoPlay loop muted playsInline className={styles.gridMedia} />
         </div>
 
         {/* Rusty Rider — wide */}

@@ -11,6 +11,8 @@ import amp from "../src/assets/video/amp.mp4";
 import Kona2Lottie from "./components/Kona2Lottie";
 import VX1000Animation from "./components/VX1000Lottie";
 import ProductDemo from "../src/assets/video/productDemo.mp4"
+import hopeIsPunk from "../src/assets/video/hopeIsPunk.mp4"
+import basementShow from "../src/assets/video/basementShow.mp4"
 
 
 

@@ -1,7 +1,7 @@
 import React from 'react';
 import { DotLottieReact } from '@lottiefiles/dotlottie-react';
 // Rename the import to 'animationData' to avoid a name collision with the component
-import animationData from "../assets/lotties/VX1000.json";
+import animationData from "../assets/video/VX1000yellow.json";
 
 const VX1000Animation = ({ width = '300px', loop = false }) => {
   return (

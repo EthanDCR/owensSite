@@ -105,14 +105,14 @@
   transform: translateX(-100%);
   width: 250px;
   height: auto;
-  z-index: 1;
+  z-index: 2;
 }
 
 .vx1000HeroWrapper {
   position: absolute;
   top: -130px;
   left: calc(50% - 300px);
-  z-index: 2;
+  z-index: 1;
 }
 
 /* --- PORTFOLIO GRID --- */

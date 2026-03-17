@@ -119,8 +119,7 @@
 .page .portfolioGrid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: 190px 355px;
-  grid-auto-rows: 190px;
+  grid-auto-rows: auto;
   gap: 8px;
   padding: 0;
   align-items: stretch;
@@ -137,6 +136,7 @@
 .konaPair {
   grid-column: span 1;
   grid-row: span 1;
+  aspect-ratio: 1 / 1;
 }
 
 .konaPair > div,
@@ -154,8 +154,27 @@
   grid-column: span 2;
 }
 
+/* Aspect ratio helpers */
+.cellLandscape {
+  aspect-ratio: 16 / 9;
+}
+
+.cellPortrait {
+  aspect-ratio: 3 / 4;
+}
+
+.cellLandscape32 {
+  aspect-ratio: 3 / 2;
+}
 
 .gridMedia {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.gridMediaPortrait {
   width: 100%;
   height: 100%;
   object-fit: cover;

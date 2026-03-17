@@ -13,6 +13,7 @@ import VX1000Animation from "./components/VX1000Lottie";
 import ProductDemo from "../src/assets/video/productDemo.mp4"
 import hopeIsPunk from "../src/assets/video/hopeIsPunk.mp4"
 import basementShow from "../src/assets/video/basementShow.mp4"
+import scooter from "../src/assets/video/SCootaAssembeGlow.mp4"
 
 
 
@@ -63,8 +64,20 @@ function App() {
 
         {/* Twin Head Mockup */}
         <div className={styles.gridCell}>
-          <video src={ProductDemo} autoPlay loop muted playsInline alt="Twin Head Mockup" className={styles.gridMedia} />
+          <video src={ProductDemo} autoPlay loop muted playsInline className={styles.gridMedia} />
         </div>
+
+        {/* Bottom row: Hope Is Punk, Basement Show, Scooter */}
+        <div className={styles.gridCell}>
+          <video src={hopeIsPunk} autoPlay loop muted playsInline className={styles.gridMedia} />
+        </div>
+        <div className={styles.gridCell}>
+          <video src={basementShow} autoPlay loop muted playsInline className={styles.gridMedia} />
+        </div>
+        <div className={styles.gridCell}>
+          <video src={scooter} autoPlay loop muted playsInline className={styles.gridMedia} />
+        </div>
+
       </section>
 
 

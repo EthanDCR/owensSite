@@ -52,6 +52,11 @@ function App() {
           <img src={kavoslogo} alt="Kavos" className={styles.gridMedia} />
         </div>
 
+        {/* Amp video */}
+        <div className={styles.gridCell}>
+          <h3 className={styles.amptext}>AMP</h3>
+        </div>
+
         {/* Rusty Rider — wide */}
         <div className={`${styles.gridCell} ${styles.cellWide}`}>
           <video src={rustyRida} autoPlay loop muted playsInline className={styles.gridMedia} />
